@@ -1,0 +1,38 @@
+@import 'variables';
+
+.select {
+	min-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	align-items: end;
+	justify-content: end;
+	flex-direction: column;
+	background: url('@/assets/background.jpg') no-repeat center center;
+
+	&__card {
+		width: 240px;
+		max-width: 240px;
+		min-width: 240px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 20px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__card-img {
+		width: 70%;
+		height: 180px;
+		object-fit: cover;
+	}
+
+	&__card-text {
+		padding-top: 10px;
+		font-size: 16px;
+		color: $game-color-three;
+		font-weight: 700;
+	}
+}

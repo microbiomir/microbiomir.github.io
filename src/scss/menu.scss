@@ -1,0 +1,53 @@
+@import 'variables';
+
+.menu {
+	min-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: $game-color-one;
+	gap: 30px;
+
+	&__game-title {
+		font-size: 70px;
+		color: $game-color-five;
+		font-weight: 700;
+	}
+
+	&__router-link {
+		font-size: 48px;
+		color: $game-color-five;
+		width: 100%;
+		max-width: 240px;
+		padding: 10px 0px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.menu {
+		gap: 20px;
+
+		&__game-title {
+			font-size: 54px;
+		}
+	
+		&__router-link {
+			font-size: 38px;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.menu {
+		&__game-title {
+			font-size: 44px;
+		}
+	
+		&__router-link {
+			font-size: 28px;
+		}
+	}
+}

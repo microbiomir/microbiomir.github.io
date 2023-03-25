@@ -1,0 +1,26 @@
+@import 'variables';
+
+.model {
+	min-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $game-color-one;
+	overflow: hidden;
+
+	&__menu-container {
+		position: fixed;
+		top: 0px;
+		left: 100vw;
+		background-color: $game-color-two;
+		width: 100%;
+		max-width: 768px;
+		height: 100vh;
+		transition: 0.2s;
+	}
+
+	&__transformed-menu {
+		transform: translateX(-100%);
+	}
+}

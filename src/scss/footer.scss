@@ -1,0 +1,45 @@
+@import 'variables';
+
+.footer {
+	background-color: $color-one;
+	padding: 12px 30px;
+
+	&__links-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 10px;
+		padding: 8px 16px 20px 16px;
+	}
+
+	&__title-txet {
+		color: $color-two;
+		font-size: 18px;
+	}
+
+	&__contact-img {
+		width: 40px;
+		height: 40px;
+		border-radius: $radius;
+		opacity: 0.7;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		padding: 12px 24px;
+	
+		&__title-txet {
+			font-size: 16px;
+		}
+	
+		&__contact-img {
+			width: 34px;
+			height: 34px;
+		}
+	}
+}
