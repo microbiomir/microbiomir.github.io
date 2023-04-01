@@ -3,7 +3,6 @@ import { createWebHistory, createRouter } from 'vue-router';
 import App from '@/App.vue';
 import MainPage from '@/pages/MainPage.vue';
 import GalleryPage from '@/pages/GalleryPage.vue';
-import GameStart from '@/pages/GameMenu.vue';
 import GameLoading from '@/pages/GameLoading.vue';
 import GameSelect from '@/pages/GameSelect.vue';
 import GameSpyrogira from '@/pages/GameSpyrogira.vue';
@@ -18,11 +17,6 @@ const routes = [
 		path: '/gallery',
 		name: 'gallery',
 		component: GalleryPage
-	},
-	{
-		path: '/game/menu',
-		name: 'gameMenu',
-		component: GameStart
 	},
 	{
 		path: '/game/loading',

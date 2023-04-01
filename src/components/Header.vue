@@ -22,7 +22,7 @@
 						<div class="header__link-container" :class="{'link-active': getActiveStateGallery}">Галерея</div>
 					</router-link>
 				</div>
-				<router-link to="/game/menu" class="header__button-container">
+				<router-link to="/game/loading" class="header__button-container">
 					<div class="header__button-start">3D-модели</div>
 				</router-link>
 			</div>

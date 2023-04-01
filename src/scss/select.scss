@@ -8,11 +8,12 @@
 	justify-content: end;
 	flex-direction: column;
 	background: url('@/assets/background.jpg') no-repeat center center;
+	background-size: cover;
 
 	&__card {
-		width: 240px;
-		max-width: 240px;
-		min-width: 240px;
+		width: 280px;
+		max-width: 280px;
+		min-width: 280px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -31,8 +32,26 @@
 
 	&__card-text {
 		padding-top: 10px;
-		font-size: 16px;
+		font-size: 18px;
 		color: $game-color-three;
 		font-weight: 700;
+		user-select: none;
+	}
+}
+
+@media (max-width: 320px) {
+	.select {
+		align-items: center;
+		justify-content: start;
+
+		&__card {
+			width: 240px;
+			max-width: 240px;
+			min-width: 240px;
+		}
+
+		&__card-text {
+			font-size: 16px;
+		}
 	}
 }

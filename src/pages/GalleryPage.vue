@@ -4,25 +4,25 @@
 			<div class="gallery__elements-container">
 				<h2 class="gallery__description-gallery">Фотографии работы над проектом</h2>
 				<div class="gallery__images-container">
-					<div class="gallery__img-container" v-for="(item, index) in imagesWork" :key="index" @click="openImage('work', index + 1)">
+					<div class="gallery__img-container hover" v-for="(item, index) in imagesWork" :key="index" @click="openImage('work', index + 1)">
 						<img :src="require('@/assets/work' + (index + 1) + '.jpg')" :alt="item.imageAlt" class="gallery__elem-gallery">
 						<p class="gallery__text-on-img">{{ item.imageText }}</p>
 					</div>
 				</div>
 				<h2 class="gallery__description-gallery">Фотографии</h2>
 				<div class="gallery__images-container">
-					<div class="gallery__img-container" v-for="(item, index) in imagesInfuzoria" :key="index" @click="openImage('', index + 1)">
+					<div class="gallery__img-container hover" v-for="(item, index) in imagesInfuzoria" :key="index" @click="openImage('', index + 1)">
 						<img :src="require('@/assets/' + (index + 1) + '.jpg')" :alt="item.imageAlt" class="gallery__elem-gallery">
 						<p class="gallery__text-on-img">{{ item.imageText }}</p>
 					</div>
-					<div class="gallery__img-container" v-for="(item, index) in imagesSpirogira" :key="index" @click="openImage('', index + 4)">
+					<div class="gallery__img-container hover" v-for="(item, index) in imagesSpirogira" :key="index" @click="openImage('', index + 4)">
 						<img :src="require('@/assets/' + (index + 4) + '.jpg')" :alt="item.imageAlt" class="gallery__elem-gallery">
 						<p class="gallery__text-on-img">{{ item.imageText }}</p>
 					</div>
 				</div>
 				<h2 class="gallery__description-gallery">Видео</h2>
 				<div class="gallery__images-container">
-					<div class="gallery__img-container" @click="openVideo('video', 1)">
+					<div class="gallery__img-container hover" @click="openVideo('video', 1)">
 						<video src="@/assets/video1.mp4" class="gallery__elem-gallery" autoplay muted loop></video>
 						<p class="gallery__text-on-img">Видео загрузки</p>
 					</div>
