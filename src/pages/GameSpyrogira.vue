@@ -2,6 +2,9 @@
 	<main class="model">
 		<div class="model__model-container">
 			<img src="@/assets/arrow.png" alt="меню" class="model__open-menu-button" @click="openModelMenu()">
+			<iframe src="https://microbiomir.github.io/3d-models/spyrogira.html" class="model__canvas-container">
+				К сожалению в этом браузере мы не можем загрузить 3D модель
+			</iframe>
 		</div>
 		<div class="model__menu-container" :class="{'model__transformed-menu': menuIsOpened}">
 			<div class="model__close-menu-button" @click="openModelMenu()"><p>Cкрыть</p><router-link to="/"><p>Главное меню</p></router-link></div>
@@ -21,10 +24,13 @@
 		</div>
 	</main>
 </template>
-	
+
 <script>
 	export default {
 		name: 'GameSpyrogira',
+		mounted() {
+			alert(`На данный момент мельница используется в качестве прототипа, позже вместо мельницы будет клетка спирогиры`)
+		},
 		data() {
 			return {
 				menuIsOpened: false,
