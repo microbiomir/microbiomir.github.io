@@ -1,0 +1,139 @@
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'gallery';
+@import 'select';
+@import 'model';
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: $color-dark $color-light;
+}
+
+*::-webkit-scrollbar {
+	height: 12px;
+	width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+	background: $color-light;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: $color-dark;
+	border-radius: $radius;
+	border: 1px solid $color-light;
+}
+
+body, a, h1, h2, h3, h4, h5, h6, p {
+	font-family: $font-family;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+body, html, main {
+	min-height: 100vh;
+}
+
+.main-container {
+	display: flex;
+	justify-content: center;
+
+	.content-container {
+		width: 100%;
+		max-width: $max-width;
+		padding: 10px 60px 60px 60px;
+		min-height: unset;
+		font-size: 17px;
+	}
+
+	h3 {
+		font-size: 20px;
+		margin: 30px 0px 16px 0px;
+	}
+
+	h4 {
+		font-size: 18px;
+		margin: 24px 0px 10px 0px;
+	}
+
+	ul {
+		margin: 0px 0px 18px 0px;
+		padding-left: 30px;
+	}
+
+	.list {
+		list-style-type: none;
+		padding-left: 0px;
+	}
+
+	.post {
+		padding-left: 20px;
+		margin-bottom: 0px;
+	}
+
+	li {
+		margin-bottom: 8px;
+		line-height: 25px;
+	}
+
+	a {
+		color: $color-dark;
+		transition: all $transition-time;
+
+		&:hover {
+			color: $color-hover;
+			cursor: $cursor-hover;
+		}
+
+		&:focus-visible {
+			color: $color-hover;
+			cursor: $cursor-hover;
+			outline: none;
+		}
+	}
+
+	p {
+		margin-bottom: 18px;
+		line-height: 25px;
+	}
+
+	img {
+		max-width: 100%;
+		max-height: 400px;
+	}
+}
+
+@media (max-width: 768px) {
+	.main-container {
+		.content-container {
+			padding: 30px 40px;
+		}
+
+		h3 {
+			margin: 20px 0px 14px 0px;
+		}
+
+		h4 {
+			margin: 16px 0px 12px 0px;
+		}
+
+		img {
+			max-height: 400px;
+		}
+	}
+}
+
+@media (max-width: 568px) {
+	.main-container {
+		.content-container {
+			padding: 20px 30px;
+			font-size: 16px;
+		}
+	}
+}
+
+.d-none {
+	display: none;
+}

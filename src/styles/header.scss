@@ -1,0 +1,134 @@
+.header-container {
+	display: flex;
+	justify-content: center;
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+		gap: 0px;
+		min-height: 100vh;
+	}
+
+	.row-container {
+		max-width: $max-width;
+		padding: 16px 40px;
+		align-items: center;
+		min-height: unset;
+	}
+
+	.col {
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 0;
+	}
+
+	.title a {
+		font-weight: 700;
+		font-size: 30px;
+		color: $color-dark;
+
+		&:hover {
+			cursor: $cursor-hover;
+		}
+	}
+
+	.links-list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.form-link {
+		font-size: 20px;
+		color: $color-dark;
+		font-weight: 500;
+
+		&:hover {
+			color: $color-hover;
+			cursor: $cursor-hover;
+		}
+
+		&:focus-visible {
+			color: $color-hover;
+			cursor: $cursor-hover;
+			outline: none;
+		}
+	}
+
+	.link {
+		padding: 16px;
+	}
+
+	.button {
+		background: $color-dark;
+		box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+		border-radius: $radius;
+		font-weight: 500;
+		font-size: 17px;
+		color: #ffffff;
+		width: 100%;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: center;
+		border: none;
+		transition: all $transition-time;
+
+		&:hover {
+			position: relative;
+			background: $color-hover;
+			width: 98%;
+			margin-top: 1px;
+			margin-left: 1%;
+			padding-top: 11px;
+			padding-bottom: 11px;
+			cursor: $cursor-hover;
+		}
+
+		&:focus-visible {
+			position: relative;
+			background: $color-hover;
+			width: 98%;
+			margin-top: 1px;
+			margin-left: 1%;
+			padding-top: 11px;
+			padding-bottom: 11px;
+			cursor: $cursor-hover;
+			outline: none;
+		}
+	}
+
+	.link-container {
+		margin: 0px;
+		display: flex;
+		align-items: center;
+		width: 200px;
+	}
+
+	.active {
+		color: $color-active;
+	}
+}
+
+@media (max-width: 768px) {
+	.header-container {
+		.row-container {
+			padding: 20px;
+			flex-direction: column;
+			row-gap: 20px;
+		}
+
+		.button-container {
+			width: 100%;
+			max-width: 400px;
+		}
+	}
+}
+
+@media (max-width: 568px) {
+	.header-container {
+		.links-list {
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+	}
+}

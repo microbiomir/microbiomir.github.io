@@ -1,0 +1,103 @@
+.select-container {
+	display: flex;
+	justify-content: center;
+
+	.cards-container {
+		width: 100%;
+		max-width: $max-width;
+		padding: 40px 60px 60px 60px;
+		min-height: unset;
+		font-size: 17px;
+	}
+
+	.select-card {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 20px;
+		margin-bottom: 60px;
+	}
+
+	.card-img {
+		width: 100%;
+		max-width: 400px;
+	}
+
+	.card-description {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		justify-content: space-between;
+		padding: 10px 0px;
+	}
+
+	.card-text {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	.card-buttons {
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+	}
+
+	.card-button {
+		width: 100%;
+		min-width: 400px;
+		max-width: 500px;
+		background: $color-dark;
+		box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+		border-radius: $radius;
+		font-weight: 500;
+		font-size: 17px;
+		color: #ffffff;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: center;
+		border: none;
+		transition: all $transition-time;
+
+		&:hover {
+			position: relative;
+			background: $color-hover;
+			width: 98%;
+			margin-top: 1px;
+			margin-left: 1%;
+			padding-top: 11px;
+			padding-bottom: 11px;
+			cursor: $cursor-hover;
+		}
+
+		&:focus-visible {
+			position: relative;
+			background: $color-hover;
+			width: 98%;
+			margin-top: 1px;
+			margin-left: 1%;
+			padding-top: 11px;
+			padding-bottom: 11px;
+			cursor: $cursor-hover;
+			outline: none;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.select-container {
+		.cards-container {
+			padding: 30px 40px;
+		}
+	}
+}
+
+@media (max-width: 568px) {
+	.select-container {
+		.card-button {
+			min-width: unset;
+		}
+
+		.card-text {
+			font-size: 16px;
+		}
+	}
+}
